@@ -1,0 +1,398 @@
+/* ===== Общие настройки ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+
+/* ===== Общий контейнер страниц ===== */
+
+body > div {
+    min-height: 100vh;
+}
+
+
+/* ===== Заголовки ===== */
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+h2 {
+    margin: 0;
+}
+
+
+/* ===== Login ===== */
+
+.login-page {
+    width: 400px;
+    margin: 100px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.login-page > div {
+    margin-bottom: 20px;
+}
+
+.login-page label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+
+.login-page input {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #d5d9de;
+    border-radius: 7px;
+    outline: none;
+}
+
+.login-page input:focus {
+    border-color: #4f7cff;
+}
+
+.login-page button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 7px;
+    background: #4f7cff;
+    color: white;
+    cursor: pointer;
+}
+
+.login-page button:hover {
+    background: #3f6be0;
+}
+
+.login-page button:disabled {
+    background: #c5c9d0;
+    cursor: not-allowed;
+}
+
+
+/* ===== Ошибки ===== */
+
+[role="alert"] {
+    margin-top: 6px;
+    color: #d93025;
+    font-size: 14px;
+}
+
+
+/* ===== Dashboard ===== */
+
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 700px;
+}
+
+.dashboard-page {
+    position: relative;
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.dashboard-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.tasks {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 20px;
+
+    background: white;
+    border-radius: 10px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.tasks:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.task-name {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.task-status {
+    font-size: 14px;
+    font-weight: 600;
+    color: #666;
+}
+
+.logout-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    background: #666;
+}
+
+.logout-button:hover {
+    background: #444;
+}
+
+
+/* ===== Кнопки Dashboard ===== */
+
+button {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 7px;
+
+    background: #4f7cff;
+    color: white;
+
+    cursor: pointer;
+
+    transition: background 0.15s ease;
+}
+
+button:hover {
+    background: #3f6be0;
+}
+
+button:disabled {
+    background: #c5c9d0;
+    cursor: not-allowed;
+}
+
+
+/* Кнопки под списком */
+
+.task-list + button {
+    margin-top: 25px;
+    margin-right: 10px;
+}
+
+
+/* ===== New Task ===== */
+
+.new-task-page {
+    width: 500px;
+    margin: 60px auto;
+    padding: 35px;
+
+    background: white;
+    border-radius: 12px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.new-task-page > label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 7px;
+
+    font-weight: 600;
+}
+
+.new-task-page input,
+.new-task-page select {
+    width: 100%;
+    padding: 11px 12px;
+
+    border: 1px solid #d5d9de;
+    border-radius: 7px;
+
+    outline: none;
+}
+
+.new-task-page input:focus,
+.new-task-page select:focus {
+    border-color: #4f7cff;
+}
+
+.new-task-page button {
+    width: 100%;
+    margin-top: 25px;
+}
+
+
+/* ===== Сообщения New Task ===== */
+
+.new-task-page > div {
+    margin-top: 12px;
+}
+
+.new-task-page [role="alert"] {
+    margin-top: 6px;
+}
+
+.new-task-page .success {
+    padding: 10px;
+    border-radius: 7px;
+    background: #e6f7ec;
+    color: #18743a;
+}
+
+.new-task-page .error {
+    padding: 10px;
+    border-radius: 7px;
+    background: #fdeaea;
+    color: #b42318;
+}
+
+.new-task-page .loading {
+    color: #555;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.pagination button {
+    min-width: 40px;
+}
+
+.pagination button:disabled {
+    opacity: 0.4;
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    min-height: 300px;
+
+    color: #666;
+    font-size: 16px;
+}
+
+.loading-spinner {
+    width: 42px;
+    height: 42px;
+
+    border: 4px solid #e5e7eb;
+    border-top-color: #4f7cff;
+    border-radius: 50%;
+
+    animation: spin 0.8s linear infinite;
+}
+
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 300px;
+    padding: 30px;
+
+    text-align: center;
+}
+
+.error-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 56px;
+    height: 56px;
+    margin-bottom: 20px;
+
+    border-radius: 50%;
+
+    background: #fdeaea;
+    color: #d93025;
+
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.error h2 {
+    margin: 0 0 10px;
+
+    font-size: 22px;
+    color: #333;
+}
+
+.error p {
+    max-width: 400px;
+    margin: 0;
+
+    color: #777;
+    line-height: 1.5;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ===== Адаптивность ===== */
+
+@media (max-width: 600px) {
+    .login-page,
+    .new-task-page {
+        width: calc(100% - 30px);
+        margin: 30px auto;
+        padding: 25px;
+    }
+
+    .tasks {
+        padding: 15px;
+    }
+
+    .task-name {
+        font-size: 16px;
+    }
+}
